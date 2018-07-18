@@ -1,0 +1,88 @@
+<style lang="less">
+
+@primary-color:       #da4e57;
+
+.controller {
+  padding: 70rpx;
+  text-align: center;
+
+  &-round {
+    position: relative;
+    background: @primary-color;
+    display: inline-block;
+    height: 220rpx;
+    width: 220rpx;
+    border-radius: 100%;
+    font-size: 32rpx;
+    box-sizing: border-box;
+    text-align: center;
+
+    &:focus {
+      color: blue;
+    }
+
+    &-leading {
+      color: #fff;
+      position: absolute;
+      top: 15%;
+      left: 20%;
+      right: 20%;
+      font-weight: 600;
+    }
+
+    &-text {
+      font-size: 22rpx;
+      color: #f0f0f0;
+      position: absolute;
+      top: 45%;
+      left: 15%;
+      right: 15%;
+    }
+  }
+}
+</style>
+
+<template lang="wxml">
+  <view class="container">
+    <view class="controller">
+      <view class="controller-round" bindtap="handleClick">
+        <text class="controller-round-leading">
+          发起一个
+        </text>
+        <text class="controller-round-text">
+          群自我介绍
+        </text>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import Panel from '@/components/panel' // alias example
+  import Toast from 'wepy-com-toast'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: 'test'
+    }
+    components = {
+      panel: Panel,
+      toast: Toast
+    }
+
+    methods = {
+      handleClick() {
+        console.log(666666)
+        this.$redirect({
+          url: 'templateEdit'
+        })
+      }
+    }
+
+    onLoad() {
+      console.log(this)
+      console.log(this.$redirect)
+    }
+  }
+</script>

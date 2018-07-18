@@ -1,0 +1,27 @@
+<style lang="less">
+.list {
+  padding: 5rpx 0;
+  display: flex;
+
+  &-left {
+    margin-right: 15rpx;
+  }
+}
+</style>
+<template>
+  <view class="list">
+    <view class="list-left">
+      <slot name="left"></slot>
+    </view>
+    <view class="list-right">
+      <slot name="right"></slot>
+    </view>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+
+  export default class List extends wepy.component {
+
+  }
+</script>
