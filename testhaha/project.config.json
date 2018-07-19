@@ -10,7 +10,7 @@
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
 	"appid": "touristappid",
-	"projectname": "wx_gouda",
+	"projectname": "testhaha",
 	"condition": {
 		"search": {
 			"current": -1,
